@@ -1,5 +1,13 @@
 # 💫 About Me:
-I'm a passionate web development learner with a keen interest in creating responsive, user-friendly websites and applications. Currently, I'm exploring the fundamentals of front-end technologies like HTML, CSS, and JavaScript, and I’m diving into frameworks such as React and Vue.js. As a curious and detail-oriented developer, I enjoy solving problems and continuously learning new tools to enhance my skills.<br><br>My goal is to build dynamic, interactive web experiences while honing my knowledge of best practices in modern web development.<br><br>
+About Me:
+
+I'm a Backend Developer and Cloud/DevOps enthusiast with a strong focus on building scalable, high-performance web applications and distributed systems. I specialize in designing robust backend architectures, working with databases, and deploying applications on cloud platforms using modern DevOps practices.
+
+I have hands-on experience with Node.js, Express, and modern backend tooling, along with strong proficiency in databases like MongoDB and PostgreSQL, ORMs such as Prisma, and in-memory systems like Redis for caching and real-time communication. I enjoy building systems that scale horizontally, especially using technologies like Redis Pub/Sub, containerization, and microservices.
+
+On the infrastructure side, I actively work with Docker, Kubernetes, and AWS, and I’m deeply interested in cloud-native development, CI/CD pipelines, and system design. I believe in writing clean, maintainable code and following best practices in backend engineering and DevOps.
+
+My goal is to grow into a full-stack engineer with strong cloud and DevOps expertise, capable of designing and deploying production-grade systems that are reliable, scalable, and secure. <br><br>
 
 
 ## 🌐 Socials:
