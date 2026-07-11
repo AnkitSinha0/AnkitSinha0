@@ -23,19 +23,40 @@ Outside of engineering, I'm building toward a long-term goal of founding a gamin
 
 ### 🚀 Flagship Projects
 
-![Projects](./metrics.projects.svg)
+<table>
+<tr>
+<td width="50%" valign="top">
 
----
+**🔧 ForgeOps**
 
-### 🏆 Achievements
+Self-hostable, Vercel-like PaaS written in Go. Handles Git-based deploys, containerized builds with gVisor isolation, automatic TLS, and live log streaming.
 
-![Achievements](./metrics.achievements.svg)
+`Go` `Docker` `gVisor` `PostgreSQL` `Redis` `Caddy`
 
----
+- Build cache with SHA-256 content-addressed dedup
+- SSE-based real-time log streaming to browser
+- Prometheus/Grafana observability stack
 
-### 📈 Coding Habits
+[**→ View Repo**](https://github.com/AnkitSinha0/forgeops)
 
-![Habits](./metrics.habits.svg)
+</td>
+<td width="50%" valign="top">
+
+**🗄️ HashVault**
+
+Distributed cloud storage system in Go with content-based deduplication and resumable chunked uploads.
+
+`Go` `PostgreSQL` `Redis` `AWS S3`
+
+- SHA-256 deduplication engine
+- Chunked, resumable file uploads
+- S3-backed object storage layer
+
+[**→ View Repo**](https://github.com/AnkitSinha0/hashvault)
+
+</td>
+</tr>
+</table>
 
 ---
 
