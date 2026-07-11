@@ -1,68 +1,68 @@
 name: Metrics
-
 on:
-  schedule:
-    - cron: "0 */12 * * *"
+  schedule: [{cron: "0 0 * * *"}]
   workflow_dispatch:
+  push: {branches: ["main"]}
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
-
     steps:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          user: AnkitSinha0
-
           filename: github-metrics.svg
+
+          # ---- Base look ----
           template: classic
-
           base: header, activity, community, repositories, metadata
-
           config_timezone: Asia/Kolkata
 
-          # Languages
-          plugin_languages: yes
-          plugin_languages_limit: 8
-          plugin_languages_recent_days: 30
-          plugin_languages_recent_load: 300
-          plugin_languages_sections: most-used
+          # ---- Isometric/dark theme to match your voxel branding ----
+          plugin_lines: yes
+          plugin_traffic: no
+          config_display: large
+          config_animations: yes
+          config_octicon: yes
 
-          # Coding habits
+          # ---- Core stats ----
+          plugin_languages: yes
+          plugin_languages_ignored: html, css, dockerfile
+          plugin_languages_limit: 8
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_details: bytes-size, percentage
+
+          # ---- Activity & habits (streaks, commit patterns) ----
           plugin_habits: yes
-          plugin_habits_days: 14
           plugin_habits_facts: yes
           plugin_habits_charts: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
 
-          # Achievements
+          # ---- Contribution calendar-style isometric ----
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+          # ---- Followers/stars ----
+          plugin_followup: yes
+          plugin_stars: yes
+          plugin_stars_limit: 4
+
+          # ---- Repos worth spotlighting: ForgeOps + Orion ----
+          plugin_projects: yes
+
+          # ---- Code snippet of the day (shows off Go) ----
+          plugin_code: yes
+          plugin_code_languages: go
+          plugin_code_load: 400
+
+          # ---- Achievements-style badges ----
           plugin_achievements: yes
           plugin_achievements_threshold: C
+          plugin_achievements_secrets: yes
 
-          # Topics
-          plugin_topics: yes
-          plugin_topics_limit: 20
-
-          # Calendar
-          plugin_isocalendar: yes
-
-          # Notable contributions
-          plugin_notable: yes
-
-          # Lines of code
-          plugin_lines: yes
-
-          # Stars
-          plugin_stars: yes
-
-          # Repository follow-up
-          plugin_followup: yes
-
-          # Introduction card
-          plugin_introduction: yes
-
-          # Repository traffic
-          plugin_traffic: yes
+          # ---- Performance/size optimization ----
+          optimize: yes
+          use_prebuilt_image: yes
