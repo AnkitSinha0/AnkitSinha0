@@ -10,59 +10,56 @@ jobs:
     permissions:
       contents: write
     steps:
+      # Base stats
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          filename: github-metrics.svg
-
-          # ---- Base look ----
+          filename: metrics.base.svg
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Kolkata
-
-          # ---- Isometric/dark theme to match your voxel branding ----
-          plugin_lines: yes
-          plugin_traffic: no
-          config_display: large
-          config_animations: yes
-          config_octicon: yes
-
-          # ---- Core stats ----
           plugin_languages: yes
           plugin_languages_ignored: html, css, dockerfile
           plugin_languages_limit: 8
-          plugin_languages_analysis_timeout: 15
           plugin_languages_details: bytes-size, percentage
 
-          # ---- Activity & habits (streaks, commit patterns) ----
+      # Projects
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics.projects.svg
+          base: ""
+          plugin_projects: yes
+
+      # Achievements
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics.achievements.svg
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_threshold: C
+          plugin_achievements_secrets: yes
+
+      # Coding habits — isolated so errors here don't kill the others
+      - uses: lowlighter/metrics@latest
+        continue-on-error: true
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics.habits.svg
+          base: ""
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_habits_from: 200
           plugin_habits_days: 14
+          config_timezone: Asia/Kolkata
 
-          # ---- Contribution calendar-style isometric ----
+      # Isocalendar
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics.isocalendar.svg
+          base: ""
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-
-          # ---- Followers/stars ----
-          plugin_followup: yes
-          plugin_stars: yes
-          plugin_stars_limit: 4
-
-          # ---- Repos worth spotlighting: ForgeOps + Orion ----
-          plugin_projects: yes
-
-          # ---- Code snippet of the day (shows off Go) ----
-          plugin_code: yes
-          plugin_code_languages: go
-          plugin_code_load: 400
-
-          # ---- Achievements-style badges ----
-          plugin_achievements: yes
-          plugin_achievements_threshold: C
-          plugin_achievements_secrets: yes
-
-          # ---- Performance/size optimization ----
-          optimize: yes
-          use_prebuilt_image: yes
