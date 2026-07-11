@@ -1,14 +1,13 @@
 ## 👋 About Me
 
-I'm a backend engineer based in India, focused on **cloud-native systems** and **platform engineering**. Right now I'm deep in **Project Haunts** — a two-project portfolio built to land a 15+ LPA backend/cloud role:
+I'm a backend engineer based in India, focused on **cloud-native systems** and **platform engineering**. :
 
 - **ForgeOps** — a self-hostable, Vercel-like PaaS written in Go
-- **Orion** — multi-tenant blob storage with a custom Kubernetes operator
+- **HashVault** — a cloud storage with deduplication logic
 
 Outside of engineering, I'm building toward a long-term goal of founding a gaming and animation studio — I write horror stories, shoot photography, and I'm slowly prototyping a voxel/isometric horror game on the side.
 
 - 🎓 BCA (9.86 CGPA), Lovely Professional University — currently pursuing MCA
-- 📝 Published research: *IJSREM Vol. 10, April 2026*
 - 🌱 Currently learning Java, DSA, and studying for AWS SAA
 - 🎯 Next up: CKA certification
 
