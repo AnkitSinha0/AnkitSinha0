@@ -1,3 +1,49 @@
-# Hi, I'm Ankit 👋
+## 👋 About Me
 
-![Metrics](./github-metrics.svg)
+I'm a backend engineer based in India, focused on **cloud-native systems** and **platform engineering**. Right now I'm deep in **Project Haunts** — a two-project portfolio built to land a 15+ LPA backend/cloud role:
+
+- **ForgeOps** — a self-hostable, Vercel-like PaaS written in Go
+- **Orion** — multi-tenant blob storage with a custom Kubernetes operator
+
+Outside of engineering, I'm building toward a long-term goal of founding a gaming and animation studio — I write horror stories, shoot photography, and I'm slowly prototyping a voxel/isometric horror game on the side.
+
+- 🎓 BCA (9.86 CGPA), Lovely Professional University — currently pursuing MCA
+- 📝 Published research: *IJSREM Vol. 10, April 2026*
+- 🌱 Currently learning Java, DSA, and studying for AWS SAA
+- 🎯 Next up: CKA certification
+
+---
+
+### 🧠 Languages & Tools
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=go,java,js,py,docker,kubernetes,postgres,redis,aws,grafana,prometheus,git,linux,neovim&perline=7" />
+</p>
+
+---
+
+### 🚀 Flagship Projects
+
+![Projects](./metrics.projects.svg)
+
+---
+
+### 🏆 Achievements
+
+![Achievements](./metrics.achievements.svg)
+
+---
+
+### 📈 Coding Habits
+
+![Habits](./metrics.habits.svg)
+
+---
+
+### 📊 Overview
+
+![Metrics](./metrics.base.svg)
+
+<p align="center">
+  <img src="./metrics.isocalendar.svg" width="90%" />
+</p>
